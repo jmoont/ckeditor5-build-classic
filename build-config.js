@@ -30,7 +30,16 @@ module.exports = {
 		'@ckeditor/ckeditor5-image/src/imageupload',
 		'@ckeditor/ckeditor5-link/src/link',
 		'@ckeditor/ckeditor5-list/src/list',
-		'@ckeditor/ckeditor5-paragraph/src/paragraph'
+		'@ckeditor/ckeditor5-paragraph/src/paragraph',
+		'@ckeditor/ckeditor5-alignment/src/alignment',
+		'@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter',
+		'@ckeditor/ckeditor5-autoformat/src/autoformat',
+		'@ckeditor/ckeditor5-basic-styles/src/bold',
+		'@ckeditor/ckeditor5-basic-styles/src/italic',
+		'@ckeditor/ckeditor5-basic-styles/src/strikethrough',
+		'@ckeditor/ckeditor5-basic-styles/src/underline',
+		'@ckeditor/ckeditor5-table/src/table',
+		'@ckeditor/ckeditor5-table/src/tabletoolbar'
 	],
 
 	// Editor config.
@@ -41,18 +50,35 @@ module.exports = {
 				'|',
 				'bold',
 				'italic',
-				'link',
-				'bulletedList',
+				'underline',
+				'strikethrough',
+				'|',
+				'alignment',
+				'|',
 				'numberedList',
+				'bulletedList',
+				'|',
+				'link',
+				'blockquote',
 				'imageUpload',
-				'blockQuote',
+				'insertTable',
+				'|',
 				'undo',
 				'redo'
 			]
 		},
 
 		image: {
-			toolbar: [ 'imageStyle:full', 'imageStyle:side', '|', 'imageTextAlternative' ]
+			styles: [
+				'full',
+				'alignLeft',
+				'alignRight'
+			],
+			toolbar: [ 'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight', '|', 'imageTextAlternative' ]
+		},
+
+		table: {
+			toolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
 		},
 
 		// UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.

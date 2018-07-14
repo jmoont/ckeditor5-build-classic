@@ -20,6 +20,15 @@ import ImageuploadPlugin from '@ckeditor/ckeditor5-image/src/imageupload';
 import LinkPlugin from '@ckeditor/ckeditor5-link/src/link';
 import ListPlugin from '@ckeditor/ckeditor5-list/src/list';
 import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import AlignmentPlugin from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Uploadadapter1Plugin from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
+import Autoformat1Plugin from '@ckeditor/ckeditor5-autoformat/src/autoformat';
+import Bold1Plugin from '@ckeditor/ckeditor5-basic-styles/src/bold';
+import Italic1Plugin from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import StrikethroughPlugin from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import UnderlinePlugin from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import TablePlugin from '@ckeditor/ckeditor5-table/src/table';
+import TabletoolbarPlugin from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -40,7 +49,16 @@ ClassicEditor.build = {
 		ImageuploadPlugin,
 		LinkPlugin,
 		ListPlugin,
-		ParagraphPlugin
+		ParagraphPlugin,
+		AlignmentPlugin,
+		Uploadadapter1Plugin,
+		Autoformat1Plugin,
+		Bold1Plugin,
+		Italic1Plugin,
+		StrikethroughPlugin,
+		UnderlinePlugin,
+		TablePlugin,
+		TabletoolbarPlugin
 	],
 	config: {
 		toolbar: {
@@ -49,21 +67,42 @@ ClassicEditor.build = {
 				'|',
 				'bold',
 				'italic',
-				'link',
-				'bulletedList',
+				'underline',
+				'strikethrough',
+				'|',
+				'alignment',
+				'|',
 				'numberedList',
+				'bulletedList',
+				'|',
+				'link',
+				'blockquote',
 				'imageUpload',
-				'blockQuote',
+				'insertTable',
+				'|',
 				'undo',
 				'redo'
 			]
 		},
 		image: {
+			styles: [
+				'full',
+				'alignLeft',
+				'alignRight'
+			],
 			toolbar: [
+				'imageStyle:alignLeft',
 				'imageStyle:full',
-				'imageStyle:side',
+				'imageStyle:alignRight',
 				'|',
 				'imageTextAlternative'
+			]
+		},
+		table: {
+			toolbar: [
+				'tableColumn',
+				'tableRow',
+				'mergeTableCells'
 			]
 		},
 		language: 'en'
