@@ -29,6 +29,7 @@ import StrikethroughPlugin from '@ckeditor/ckeditor5-basic-styles/src/strikethro
 import UnderlinePlugin from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import TablePlugin from '@ckeditor/ckeditor5-table/src/table';
 import TabletoolbarPlugin from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import LinktargetPlugin from './linktarget.js';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -58,7 +59,8 @@ ClassicEditor.build = {
 		StrikethroughPlugin,
 		UnderlinePlugin,
 		TablePlugin,
-		TabletoolbarPlugin
+		TabletoolbarPlugin,
+		LinktargetPlugin
 	],
 	config: {
 		toolbar: {

@@ -15,7 +15,6 @@ module.exports = {
 	// Plugins to include in the build.
 	plugins: [
 		'@ckeditor/ckeditor5-essentials/src/essentials',
-
 		'@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter',
 		'@ckeditor/ckeditor5-autoformat/src/autoformat',
 		'@ckeditor/ckeditor5-basic-styles/src/bold',
@@ -39,7 +38,8 @@ module.exports = {
 		'@ckeditor/ckeditor5-basic-styles/src/strikethrough',
 		'@ckeditor/ckeditor5-basic-styles/src/underline',
 		'@ckeditor/ckeditor5-table/src/table',
-		'@ckeditor/ckeditor5-table/src/tabletoolbar'
+		'@ckeditor/ckeditor5-table/src/tabletoolbar',
+		'./linktarget.js'
 	],
 
 	// Editor config.
